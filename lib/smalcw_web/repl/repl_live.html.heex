@@ -1,0 +1,10 @@
+<%= for {code, output} <- @outputs do %>
+  <h3> <%= code %>: </h3>
+  <p> <%= output %> </p>
+<% end %>
+
+<.form let={f} for={:repl} phx-change="edit" phx-submit="run">
+  <%= text_input f, :code %>
+
+  <%= submit "Run" %>
+</.form>
