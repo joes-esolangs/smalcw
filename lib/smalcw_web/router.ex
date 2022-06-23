@@ -19,7 +19,8 @@ defmodule SmalcwWeb.Router do
   scope "/", SmalcwWeb do
     pipe_through :browser
 
-    live "/", ReplLive
+    get "/", PageController, :index
+    live "/repl", ReplLive
   end
 
   # Other scopes may use custom stacks.
